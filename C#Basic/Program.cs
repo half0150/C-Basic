@@ -80,7 +80,7 @@ namespace C_Basic
         {
             WriteLine($"Before: a = {a}, b = {b};");
 
-            // Using a temporary variable to swap values
+            
             int temp = a;
             a = b;
             b = temp;
