@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34408.163
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C#Basic", "C#Basic\C#Basic.csproj", "{9DAEC89D-A79A-4B6E-8281-9B567F19AB43}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "C#Basic", "C#Basic\C#Basic.csproj", "{9DAEC89D-A79A-4B6E-8281-9B567F19AB43}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Conditional Statements", "Conditional Statements\Conditional Statements.csproj", "{1C7C1DAB-26CD-4F9B-87B3-93ABC5D65AB3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTesting", "UnitTesting\UnitTesting.csproj", "{863D4D40-CEB2-4A7B-A109-A89EB281908C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{9DAEC89D-A79A-4B6E-8281-9B567F19AB43}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9DAEC89D-A79A-4B6E-8281-9B567F19AB43}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9DAEC89D-A79A-4B6E-8281-9B567F19AB43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C7C1DAB-26CD-4F9B-87B3-93ABC5D65AB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C7C1DAB-26CD-4F9B-87B3-93ABC5D65AB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C7C1DAB-26CD-4F9B-87B3-93ABC5D65AB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C7C1DAB-26CD-4F9B-87B3-93ABC5D65AB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{863D4D40-CEB2-4A7B-A109-A89EB281908C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{863D4D40-CEB2-4A7B-A109-A89EB281908C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{863D4D40-CEB2-4A7B-A109-A89EB281908C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{863D4D40-CEB2-4A7B-A109-A89EB281908C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
