@@ -3,7 +3,7 @@ using static System.Console;
 
 namespace C_Basic
 {
-    internal class Program
+    public class Conditional_Statements
     {
         static void Main(string[] args)
         {
@@ -37,7 +37,7 @@ namespace C_Basic
             WriteLine(IfYearIsLeap(2018)); // Output: False
         }
 
-       // Bruger inbygget Math funktion og retunere derefter nummeret
+        // Bruger inbygget Math funktion og returnere derefter nummeret
         static int AbsoluteValue(int number)
         {
             number = Math.Abs(number);

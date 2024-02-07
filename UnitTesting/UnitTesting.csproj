@@ -22,4 +22,9 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\C#Basic\C#Basic.csproj" />
+    <ProjectReference Include="..\Conditional Statements\Conditional Statements.csproj" />
+  </ItemGroup>
+
 </Project>

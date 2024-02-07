@@ -3,7 +3,7 @@ using static System.Console;
 
 namespace C_Basic
 {
-    internal class Program
+    public class basic_
     {
         static void Main(string[] args)
         {
@@ -23,7 +23,7 @@ namespace C_Basic
 
         }
 
-        static int AddAndMultiply(int a, int b, int c)
+        public static int AddAndMultiply(int a, int b, int c)
         {
             return (a + b) * c; // Returnerer resultatet af at lægge a og b sammen og derefter gange med c
         }
