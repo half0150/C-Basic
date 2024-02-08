@@ -6,8 +6,6 @@
     {
         static void Main(string[] args)
         {
-            // Kalder metoden til at udskrive multiplikationstabellen
-            // Udskriver TheBiggestNumber array1 og 2
             PrintMultiplicationTable();
             int[] array1 = { 190, 291, 145, 209, 280, 200 };
             int[] array2 = { -9, -2, -7, -8, -4 };
@@ -16,11 +14,26 @@
             int[] array4 = { 9, 4, 5, 3, 7, 7, 7, 3, 2, 5, 7, 7 };
 
 
+            int[] array5 = { 45, 23, 44, 68, 65, 70, 80, 81, 82 };
+            int[] array6 = { 7, 3, 5, 8, 9, 3, 1, 4 };
+
+
+            int n = 30;
+            List<int> primes = SieveOfEratosthenes(n);
+
+
+            // WriteLine
+
             WriteLine("The biggest number in array1 is: " + TheBiggestNumber(array1));
             WriteLine("The biggest number in array2 is: " + TheBiggestNumber(array2));
 
             WriteLine("Antal gange to 7'ere er ved siden af hinanden i array3: " + Two7sNextToEachOther(array3));
             WriteLine("Antal gange to 7'ere er ved siden af hinanden i array4: " + Two7sNextToEachOther(array4));
+
+            WriteLine("Are there three increasing adjacent numbers in array5? " + ThreeIncreasingAdjacent(array5));
+            WriteLine("Are there three increasing adjacent numbers in array6? " + ThreeIncreasingAdjacent(array6));
+
+            WriteLine("Prime numbers up to " + n + ": " + string.Join(", ", primes));
         }
 
         static void PrintMultiplicationTable()
@@ -82,8 +95,56 @@
             // Returnerer antallet af gange to 7 taller er ved siden af hinanden
             return count;
         }
+
+
+
+        static bool ThreeIncreasingAdjacent(int[] numbers)
+        {
+            
+            for (int i = 0; i < numbers.Length - 2; i++)
+            {
+                
+                if (numbers[i] + 1 == numbers[i + 1] && numbers[i + 1] + 1 == numbers[i + 2])
+                {
+                    
+                    return true;
+                }
+            }
+            
+            return false;
+        }
+
+
+        static List<int> SieveOfEratosthenes(int n)
+        {
+            
+            bool[] prime = new bool[n + 1];
+            for (int i = 0; i <= n; i++)
+                prime[i] = true;
+
+            
+            for (int p = 2; p * p <= n; p++)
+            {
+                
+                if (prime[p] == true)
+                {
+                    
+                    for (int i = p * p; i <= n; i += p)
+                        prime[i] = false;
+                }
+            }
+
+            
+            List<int> primes = new List<int>();
+            for (int p = 2; p <= n; p++)
+            {
+                if (prime[p] == true)
+                    primes.Add(p);
+            }
+
+            return primes;
+        }
     }
 
 
 }
-
