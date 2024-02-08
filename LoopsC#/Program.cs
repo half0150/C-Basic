@@ -47,40 +47,39 @@
                 throw new ArgumentException("Array is empty");
             }
 
-            // Initialize the variable to store the biggest number
+            
             int biggestNumber = numbers[0];
 
             // Looper gennem array fra det andet element
             for (int i = 1; i < numbers.Length; i++)
             {
-                // If the current element is greater than the biggest number found so far
-                // update the biggest number
+                
                 if (numbers[i] > biggestNumber)
                 {
                     biggestNumber = numbers[i];
                 }
             }
 
-            // Return the biggest number
+            // Retunere det største nummer
             return biggestNumber;
         }
 
         static int Two7sNextToEachOther(int[] digits)
         {
-            // Initialiserer en tæller til at gemme antallet af gange to 7'ere er ved siden af hinanden
+            // Bruger en tæller til at gemme antallet af gange to 7 taller er ved siden af hinanden
             int count = 0;
 
             // Løber gennem arrayet, starter fra det andet element
             for (int i = 1; i < digits.Length; i++)
             {
-                // Tjekker om det aktuelle element og det forrige element begge er 7
+                // Tjekker om det aktuelle element og det forrige element er 7
                 if (digits[i] == 7 && digits[i - 1] == 7)
                 {
                     count++;
                 }
             }
 
-            // Returnerer antallet af gange to 7'ere er ved siden af hinanden
+            // Returnerer antallet af gange to 7 taller er ved siden af hinanden
             return count;
         }
     }
