@@ -1,4 +1,8 @@
-﻿namespace LoopsC_
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace LoopsC_
 {
     using static System.Console;
 
@@ -34,6 +38,26 @@
             WriteLine("Are there three increasing adjacent numbers in array6? " + ThreeIncreasingAdjacent(array6));
 
             WriteLine("Prime numbers up to " + n + ": " + string.Join(", ", primes));
+
+            
+            WriteLine("Extracted substring from '##abc##def': " + ExtractString("##abc##def"));
+            WriteLine("Extracted substring from '12####78': " + ExtractString("12####78"));
+            WriteLine("Extracted substring from 'gar##d#en': " + ExtractString("gar##d#en"));
+            WriteLine("Extracted substring from '++##--##++': " + ExtractString("++##--##++"));
+
+            WriteLine(FullSequenceOfLetters("ds")); 
+            WriteLine(FullSequenceOfLetters("or"));
+
+
+
+            WriteLine(SumAndAverage(11, 66)); 
+            WriteLine(SumAndAverage(-10, 0));
+
+
+            DrawTriangle();
+
+            WriteLine(ToThePowerOf(-2, 3)); 
+            WriteLine(ToThePowerOf(5, 5));  
         }
 
         static void PrintMultiplicationTable()
@@ -60,13 +84,13 @@
                 throw new ArgumentException("Array is empty");
             }
 
-            
+
             int biggestNumber = numbers[0];
 
             // Looper gennem array
             for (int i = 1; i < numbers.Length; i++)
             {
-                
+
                 if (numbers[i] > biggestNumber)
                 {
                     biggestNumber = numbers[i];
@@ -96,45 +120,42 @@
             return count;
         }
 
-
-
         static bool ThreeIncreasingAdjacent(int[] numbers)
         {
-            
+
             for (int i = 0; i < numbers.Length - 2; i++)
             {
-                
+
                 if (numbers[i] + 1 == numbers[i + 1] && numbers[i + 1] + 1 == numbers[i + 2])
                 {
-                    
+
                     return true;
                 }
             }
-            
+
             return false;
         }
 
-
         static List<int> SieveOfEratosthenes(int n)
         {
-            
+
             bool[] prime = new bool[n + 1];
             for (int i = 0; i <= n; i++)
                 prime[i] = true;
 
-            
+
             for (int p = 2; p * p <= n; p++)
             {
-                
+
                 if (prime[p] == true)
                 {
-                    
+
                     for (int i = p * p; i <= n; i += p)
                         prime[i] = false;
                 }
             }
 
-            
+
             List<int> primes = new List<int>();
             for (int p = 2; p <= n; p++)
             {
@@ -144,7 +165,122 @@
 
             return primes;
         }
+
+        static string ExtractString(string s)
+        {
+            
+            int startIndex = -1;
+            int endIndex = -1;
+
+            // Loop through the characters of the string
+            for (int i = 0; i < s.Length - 1; i++)
+            {
+                
+                if (s[i] == '#' && s[i + 1] == '#')
+                {
+                    
+                    if (startIndex == -1)
+                    {
+                        startIndex = i + 2; 
+                    }
+                    else
+                    {
+                        endIndex = i; 
+                        break; 
+                    }
+                }
+            }
+
+            
+            if (endIndex == -1)
+            {
+                
+                endIndex = s.Length - 1;
+            }
+
+            
+            if (startIndex != -1 && endIndex != -1)
+            {
+                
+                return s.Substring(startIndex, endIndex - startIndex + 1);
+            }
+            else
+            {
+                
+                return "";
+            }
+        }
+
+
+
+
+        static string FullSequenceOfLetters(string letters)
+        {
+            // Extracter den første og anden fra input string
+            char first = letters[0];
+            char second = letters[1];
+
+            
+            StringBuilder sequence = new StringBuilder();
+
+            
+            for (char c = first; c <= second; c++)
+            {
+                
+                sequence.Append(c);
+            }
+
+            // Retunere en string
+            return sequence.ToString();
+        }
+
+
+        static string SumAndAverage(int n, int m)
+        {
+            
+            int sum = 0;
+            int count = 0;
+
+            // Looper så jeg kan få sum og bruger count for at finde ud af hvor mange gange der loopede igennem
+            for (int i = n; i <= m; i++)
+            {
+               
+                sum += i;
+                
+                count++;
+            }
+
+            // Beregner gennemsnittet
+            double average = (double)sum / count;
+
+            // Retunere $Sum og Average
+            return $"Sum: {sum}, Average: {average}";
+        }
+
+        static void DrawTriangle()
+        {
+            
+            int height = 10; 
+
+            
+            for (int i = 1; i <= height; i++)
+            {
+               
+                for (int j = 1; j <= i; j++)
+                {
+                    Write("*");
+                }
+                
+                WriteLine();
+            }
+        }
+
+
+        static double ToThePowerOf(int baseNumber, int exponent)
+        {
+            
+            double result = Math.Pow(baseNumber, exponent);
+            return result;
+        }
     }
-
-
 }
