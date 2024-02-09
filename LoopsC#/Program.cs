@@ -63,7 +63,7 @@
             
             int biggestNumber = numbers[0];
 
-            // Looper gennem array fra det andet element
+            // Looper gennem array
             for (int i = 1; i < numbers.Length; i++)
             {
                 
