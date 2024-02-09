@@ -10,6 +10,8 @@ namespace LoopsC_
     {
         static void Main(string[] args)
         {
+
+            // Her har jeg mine arrays til nogle af de opgaver, hvor jeg bruger et array
             PrintMultiplicationTable();
             int[] array1 = { 190, 291, 145, 209, 280, 200 };
             int[] array2 = { -9, -2, -7, -8, -4 };
@@ -26,7 +28,7 @@ namespace LoopsC_
             List<int> primes = SieveOfEratosthenes(n);
 
 
-            // WriteLine
+            // Her kalder jeg mine forskellige writeLine programs
 
             WriteLine("The biggest number in array1 is: " + TheBiggestNumber(array1));
             WriteLine("The biggest number in array2 is: " + TheBiggestNumber(array2));
@@ -172,7 +174,7 @@ namespace LoopsC_
             int startIndex = -1;
             int endIndex = -1;
 
-            // Loop through the characters of the string
+            
             for (int i = 0; i < s.Length - 1; i++)
             {
                 
@@ -262,7 +264,8 @@ namespace LoopsC_
             
             int height = 10; 
 
-            
+            // Looper, hvor jeg ligger 1 til for hver række
+            // Gør det samme for j
             for (int i = 1; i <= height; i++)
             {
                
@@ -276,10 +279,17 @@ namespace LoopsC_
         }
 
 
-        static double ToThePowerOf(int baseNumber, int exponent)
+        static int ToThePowerOf(int baseNumber, int exponent)
         {
             
-            double result = Math.Pow(baseNumber, exponent);
+            int result = 1;
+
+            
+            for (int i = 0; i < exponent; i++)
+            {
+                result *= baseNumber;
+            }
+
             return result;
         }
     }
