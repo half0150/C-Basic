@@ -1,6 +1,6 @@
 ﻿namespace Strings
 {
-
+    using System.Text;
     using static System.Console;
     using static System.Net.Mime.MediaTypeNames;
 
@@ -32,6 +32,12 @@
 
             WriteLine(HowManyOccurrences("do it now", "do"));
             WriteLine(HowManyOccurrences("", "d"));
+
+            WriteLine(SortCharactersDescending("onomatopoeia"));
+            WriteLine(SortCharactersDescending("fohjwf42os"));
+
+            WriteLine(CompressString("kkkktttrrrrrrrrrr"));
+            WriteLine(CompressString("p555ppp7www"));
         }
 
         static string AddSeparator(string input, string separator)
@@ -168,10 +174,53 @@
             while ((index = input.IndexOf(substring, index)) != -1)
             {
                 count++;
-
                 index += substring.Length;
             }
             return count;
+        }
+
+        static string SortCharactersDescending(string input)
+        {
+            char[] chars = input.ToCharArray();
+
+            Array.Sort(chars);
+            Array.Reverse(chars);
+
+            string sortedString = new string(chars);
+
+            return sortedString;
+        }
+
+        static string CompressString(string input)
+        {
+            if (string.IsNullOrEmpty(input))
+                return input;
+
+            StringBuilder CompressedString = new StringBuilder();
+
+            char currentChar = input[0];
+            int charCount = 1;
+
+            for (int i = 1; i < input.Length; i++)
+            {
+                if (input[i] == currentChar)
+                {
+                    charCount++;
+                }
+                else
+                {
+                    CompressedString.Append(currentChar);
+                    CompressedString.Append(charCount);
+
+                    currentChar = input[i];
+                    charCount = 1;
+                }
+            }
+
+            CompressedString.Append(currentChar);
+            CompressedString.Append(charCount);
+
+            return CompressedString.ToString();
         }
 
     }
