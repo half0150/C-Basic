@@ -24,6 +24,14 @@
 
             WriteLine(NumberOfWords("This is sample sentence"));
             WriteLine(NumberOfWords("OK"));
+
+
+            WriteLine(RevertWordsOrder("John Doe."));
+            WriteLine(RevertWordsOrder("A. B. C."));
+
+
+            WriteLine(HowManyOccurrences("do it now", "do"));
+            WriteLine(HowManyOccurrences("", "d"));
         }
 
         static string AddSeparator(string input, string separator)
@@ -128,6 +136,41 @@
                 count++;
             }
 
+            return count;
+        }
+
+        static string RevertWordsOrder(string input)
+        {
+            string[] words = input.Split(' ');
+            string result = "";
+
+            for (int i = words.Length - 1; i >= 0; i--)
+            {
+                result += words[i];
+
+                if (i != 0)
+                {
+                    result += " ";
+                }
+            }
+
+            result += input[input.Length - 1];
+
+            return result;
+        }
+
+        
+        static int HowManyOccurrences(string input, string substring)
+        {
+            int count = 0;
+            int index = 0;
+
+            while ((index = input.IndexOf(substring, index)) != -1)
+            {
+                count++;
+
+                index += substring.Length;
+            }
             return count;
         }
 
