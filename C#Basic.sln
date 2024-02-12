@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTesting", "UnitTesting\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoopsC#", "LoopsC#\LoopsC#.csproj", "{46F1F109-506A-47DE-9F72-1B3686A244D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Strings", "Strings\Strings.csproj", "{1959CC04-13B0-44D2-80C8-76826FB2FC38}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Strings", "Strings\Strings.csproj", "{1959CC04-13B0-44D2-80C8-76826FB2FC38}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayRotation", "ArrayRotation\ArrayRotation.csproj", "{4FD4C5A6-8EBB-4235-95F4-1B07883B38E2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{1959CC04-13B0-44D2-80C8-76826FB2FC38}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1959CC04-13B0-44D2-80C8-76826FB2FC38}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1959CC04-13B0-44D2-80C8-76826FB2FC38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FD4C5A6-8EBB-4235-95F4-1B07883B38E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FD4C5A6-8EBB-4235-95F4-1B07883B38E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FD4C5A6-8EBB-4235-95F4-1B07883B38E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FD4C5A6-8EBB-4235-95F4-1B07883B38E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
