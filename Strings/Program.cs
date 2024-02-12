@@ -1,5 +1,6 @@
 ﻿namespace Strings
 {
+    using System.Linq;
     using System.Text;
     using static System.Console;
     using static System.Net.Mime.MediaTypeNames;
@@ -147,22 +148,7 @@
 
         static string RevertWordsOrder(string input)
         {
-            string[] words = input.Split(' ');
-            string result = "";
-
-            for (int i = words.Length - 1; i >= 0; i--)
-            {
-                result += words[i];
-
-                if (i != 0)
-                {
-                    result += " ";
-                }
-            }
-
-            result += input[input.Length - 1];
-
-            return result;
+            return string.Join(" ", input.Split(' ').Reverse());
         }
 
         
