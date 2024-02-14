@@ -1,5 +1,6 @@
 ﻿namespace Strings
 {
+    using System.Linq;
     using System.Text;
     using static System.Console;
     using static System.Net.Mime.MediaTypeNames;
@@ -42,23 +43,23 @@
 
         static string AddSeparator(string input, string separator)
         {
-
+            
             System.Text.StringBuilder resultBuilder = new System.Text.StringBuilder();
 
-
+            
             for (int i = 0; i < input.Length; i++)
             {
-
+                
                 resultBuilder.Append(input[i]);
 
-
+                
                 if (i != input.Length - 1)
                 {
                     resultBuilder.Append(separator);
                 }
             }
 
-
+            
             return resultBuilder.ToString();
         }
 
@@ -68,7 +69,7 @@
             {
                 reverse += a[i];
             }
-
+            
             if (a == reverse)
             {
                 return true;
@@ -89,12 +90,9 @@
                 {
                     char c = str[length];
                     length++;
-                }
-                catch (IndexOutOfRangeException)
                 {
                     done = true;
                 }
-            } while (!done);
             return length;
         }
 
@@ -137,7 +135,7 @@
                 }
             }
 
-
+            
             if (wasInWord)
             {
                 count++;
@@ -148,25 +146,9 @@
 
         static string RevertWordsOrder(string input)
         {
-            string[] words = input.Split(' ');
-            string result = "";
-
-            for (int i = words.Length - 1; i >= 0; i--)
-            {
-                result += words[i];
-
-                if (i != 0)
-                {
-                    result += " ";
-                }
-            }
-
-            result += input[input.Length - 1];
-
-            return result;
         }
 
-
+        
         static int HowManyOccurrences(string input, string substring)
         {
             int count = 0;
