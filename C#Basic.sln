@@ -7,9 +7,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "C#Basic", "C#Basic\C#Basic.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Conditional Statements", "Conditional Statements\Conditional Statements.csproj", "{1C7C1DAB-26CD-4F9B-87B3-93ABC5D65AB3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTesting", "UnitTesting\UnitTesting.csproj", "{863D4D40-CEB2-4A7B-A109-A89EB281908C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTesting", "UnitTesting\UnitTesting.csproj", "{863D4D40-CEB2-4A7B-A109-A89EB281908C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoopsC#", "LoopsC#\LoopsC#.csproj", "{46F1F109-506A-47DE-9F72-1B3686A244D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoopsC#", "LoopsC#\LoopsC#.csproj", "{46F1F109-506A-47DE-9F72-1B3686A244D9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Strings", "Strings\Strings.csproj", "{B52FDDD1-23B2-40DA-88AB-45EF2CD7BC72}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayRotation", "ArrayRotation\ArrayRotation.csproj", "{0C88506F-88BB-443A-B612-C48D16D2A49B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{46F1F109-506A-47DE-9F72-1B3686A244D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{46F1F109-506A-47DE-9F72-1B3686A244D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{46F1F109-506A-47DE-9F72-1B3686A244D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B52FDDD1-23B2-40DA-88AB-45EF2CD7BC72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B52FDDD1-23B2-40DA-88AB-45EF2CD7BC72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B52FDDD1-23B2-40DA-88AB-45EF2CD7BC72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B52FDDD1-23B2-40DA-88AB-45EF2CD7BC72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C88506F-88BB-443A-B612-C48D16D2A49B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C88506F-88BB-443A-B612-C48D16D2A49B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C88506F-88BB-443A-B612-C48D16D2A49B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C88506F-88BB-443A-B612-C48D16D2A49B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
