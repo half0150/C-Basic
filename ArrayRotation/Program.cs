@@ -1,4 +1,5 @@
-﻿using System;
+﻿//Arbejdet sammen med Anton
+using System;
 
 namespace ArrayRotation
 {
